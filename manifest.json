@@ -1,0 +1,15 @@
+{
+  "short_name": "Angus Johnson",
+  "name": "Angus Johnson",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#283134",
+  "background_color": "#283134"
+}
