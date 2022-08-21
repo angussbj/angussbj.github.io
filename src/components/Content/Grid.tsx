@@ -1,5 +1,4 @@
 import React, { CSSProperties, ReactNode } from "react";
-import { Colors } from "ui";
 
 interface Props {
   children?: ReactNode;

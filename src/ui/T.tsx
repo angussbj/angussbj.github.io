@@ -4,7 +4,7 @@ import { Colors } from "./Colors";
 import Color from "color";
 
 interface Props {
-  size?: "small" | "tiny";
+  size?: number;
   color?: Color;
   children: React.ReactNode;
   unselectable?: boolean;
@@ -21,9 +21,8 @@ export function T({
   style,
 }: Props): React.ReactElement {
   const finalStyle = {
-    color: (color || Colors.DARKEST.fade(0.2)).toString(),
-    fontSize:
-      size === "tiny" ? 8 : size === "small" ? 11 : size === "big" ? 16 : 12,
+    color: (color ?? Colors.DARKEST).toString(),
+    fontSize: size ?? 16,
     fontFamily: monospace ? "monospace" : undefined,
     ...style,
   };
