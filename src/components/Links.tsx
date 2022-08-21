@@ -14,6 +14,13 @@ export function Links({ style }: Props): React.ReactElement {
         <T color={Colors.LINK}>CV</T>
       </a>
       <a
+        href={"https://www.linkedin.com/in/angus-johnson-1757888a/"}
+        target={"_blank"}
+        rel={"noreferrer"}
+      >
+        <T color={Colors.LINK}>Linked In</T>
+      </a>
+      <a
         href={
           "https://www.youtube.com/watch?v=qjQ-j7rAJi4&ab_channel=AngusJohnson"
         }
@@ -29,5 +36,5 @@ export function Links({ style }: Props): React.ReactElement {
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 12px;
 `;
