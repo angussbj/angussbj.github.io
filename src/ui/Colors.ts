@@ -8,4 +8,5 @@ export const Colors = {
   TRACE: Color("#0C0C12").fade(0.8),
   GREY: Color("#EBEBED"),
   CLOUD: Color("#EBEBED").fade(0.5),
+  LINK: Color("#0000FF"),
 };

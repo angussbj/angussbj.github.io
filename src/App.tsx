@@ -1,5 +1,5 @@
 import React from "react";
-import { Content, Title } from "./components";
+import { Content, Links, Title } from "./components";
 
 function App(): React.ReactElement {
   return (
@@ -12,6 +12,7 @@ function App(): React.ReactElement {
       }}
     >
       <Title />
+      <Links style={{ marginTop: 8 }} />
       <Content style={{ marginTop: 32 }} />
     </div>
   );
