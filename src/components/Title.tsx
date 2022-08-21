@@ -8,6 +8,7 @@ export function Title(): React.ReactElement {
         fontSize: 48,
         fontWeight: 300,
         color: Colors.DARKEST.toString(),
+        textAlign: "center",
       }}
     >
       Angus Johnson

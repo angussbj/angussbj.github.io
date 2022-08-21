@@ -56,7 +56,8 @@ export function LinkPreview({
 const Container = styled.a<{ hovered: boolean; pressed: boolean }>`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  flex-shrink: 1;
+  max-width: 400px;
   min-height: 300px;
   border: 1px solid
     ${({ hovered, pressed }): string =>

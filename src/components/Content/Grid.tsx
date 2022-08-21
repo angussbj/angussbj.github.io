@@ -10,7 +10,7 @@ export function Grid({ children, style }: Props): React.ReactElement {
     <div
       style={{
         maxWidth: 1250,
-        minWidth: 300,
+        minWidth: 250,
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",

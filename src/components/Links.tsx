@@ -1,5 +1,5 @@
 import React from "react";
-import { Colors, T } from "ui";
+import { Colors, Row, T } from "ui";
 import { cv } from "files";
 import styled from "styled-components";
 
@@ -9,7 +9,7 @@ interface Props {
 
 export function Links({ style }: Props): React.ReactElement {
   return (
-    <Row style={style}>
+    <LinkRow style={style}>
       <a href={cv} download={"Angus Johnson CV.pdf"}>
         <T color={Colors.LINK}>CV</T>
       </a>
@@ -29,12 +29,12 @@ export function Links({ style }: Props): React.ReactElement {
       >
         <T color={Colors.LINK}>Circus videos</T>
       </a>
-    </Row>
+    </LinkRow>
   );
 }
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
+const LinkRow = styled(Row)`
   gap: 12px;
+  min-width: 250px;
+  justify-content: center;
 `;
