@@ -17,24 +17,24 @@ interface Props extends LinkDetails {
 }
 
 export function LinkPreview({
-  url,
-  image,
-  label,
-  description,
-}: Props): ReactElement {
+                              url,
+                              image,
+                              label,
+                              description,
+                            }: Props): ReactElement {
   const hoverAndPress = useHoverAndPress();
 
   return (
     <Container href={url} target={"_blank"} {...hoverAndPress}>
-      <div style={{ height: 200, overflow: "hidden" }}>
+      <div style={{ height: 216, overflow: "hidden" }}>
         <img
           src={image}
           alt={`A preview of the site: ${label}`}
           style={{
             objectFit: "scale-down",
-            width: "120%",
-            marginLeft: "-10%",
-            marginTop: "-10%",
+            width: "100%",
+            // marginLeft: "-10%",
+            // marginTop: "-3%",
           }}
         />
       </div>
@@ -58,17 +58,17 @@ const Container = styled.a<{ hovered: boolean; pressed: boolean }>`
   flex-direction: column;
   flex-shrink: 1;
   max-width: 400px;
-  min-height: 300px;
+  min-height: 316px;
   border: 1px solid
     ${({ hovered, pressed }): string =>
-      (pressed
-        ? Colors.DARK_SECONDARY
-        : hovered
+  (pressed
+      ? Colors.DARK_SECONDARY
+      : hovered
         ? Colors.DARK_TERTIARY
         : Colors.TRACE
-      ).toString()};
+  ).toString()};
   background-color: ${({ hovered, pressed }): string =>
-    (pressed ? Colors.GREY : hovered ? Colors.CLOUD : Colors.WHITE).toString()};
+  (pressed ? Colors.GREY : hovered ? Colors.CLOUD : Colors.WHITE).toString()};
   border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
