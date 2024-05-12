@@ -1,3 +1,3 @@
-import cv from "./CV.pdf";
+import cv from "./Angus Johnson CV.pdf";
 
 export { cv };
