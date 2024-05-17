@@ -6,3 +6,12 @@ export { mchessImage };
 
 import odesImage from "./odes.png";
 export { odesImage };
+
+import tetrisImage from "./tetris.png";
+export { tetrisImage };
+
+import gravityImage from "./gravity.png";
+export { gravityImage };
+
+import wordleImage from "./wordle.png";
+export { wordleImage };

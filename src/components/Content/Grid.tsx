@@ -2,7 +2,7 @@ import React, { CSSProperties, ReactNode } from "react";
 
 interface Props {
   children?: ReactNode;
-  style: CSSProperties;
+  style?: CSSProperties;
 }
 
 export function Grid({ children, style }: Props): React.ReactElement {
@@ -15,6 +15,7 @@ export function Grid({ children, style }: Props): React.ReactElement {
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "center",
+        alignItems: "flex-end",
         gap: 16,
         ...style,
       }}
