@@ -3,15 +3,16 @@ import { Colors } from "./Colors";
 import styled from "styled-components";
 import { T } from "./T";
 import { baseUrl } from "../utilities/baseUrl";
-import { useHoverAndPress } from "./useHoverAndPress";
 import { Subheading } from "./Subheading";
 import { Row } from "./Row";
+import { Link } from "./Link";
 
 export interface LinkDetails {
   url: string;
   image: string;
   label: string;
   description: string;
+  codeUrl?: string;
 }
 
 interface Props extends LinkDetails {
@@ -25,13 +26,12 @@ export function LinkPreview({
   label,
   description,
   header,
+  codeUrl,
 }: Props): ReactElement {
-  const hoverAndPress = useHoverAndPress();
-
   return (
     <div>
       {header && <Subheading style={{ marginBottom: 16 }}>{header}</Subheading>}
-      <Container href={url} target={"_blank"} {...hoverAndPress}>
+      <Container href={url} target={"_blank"}>
         <div style={{ height: 216, overflow: "hidden" }}>
           <img
             src={image}
@@ -49,34 +49,42 @@ export function LinkPreview({
               {description}
             </T>
           </div>
-          <T size={12} color={Colors.DARK_SECONDARY} style={{ marginTop: 8 }}>
-            {baseUrl(url)}
-          </T>
+          <Row style={{ justifyContent: "space-between", marginTop: 8 }}>
+            <T size={12} color={Colors.DARK_SECONDARY}>
+              {baseUrl(url)}
+            </T>
+            {codeUrl && (
+              <Link url={codeUrl} style={{ fontSize: 12 }}>
+                code
+              </Link>
+            )}
+          </Row>
         </TextArea>
       </Container>
     </div>
   );
 }
 
-const Container = styled.a<{ hovered: boolean; pressed: boolean }>`
+const Container = styled.a`
   display: flex;
   flex-direction: column;
   flex-shrink: 1;
   max-width: 400px;
   min-height: 316px;
-  border: 1px solid
-    ${({ hovered, pressed }): string =>
-      (pressed
-        ? Colors.DARK_SECONDARY
-        : hovered
-        ? Colors.DARK_TERTIARY
-        : Colors.TRACE
-      ).toString()};
-  background-color: ${({ hovered, pressed }): string =>
-    (pressed ? Colors.GREY : hovered ? Colors.CLOUD : Colors.WHITE).toString()};
+  border: 1px solid ${Colors.TRACE.toString()};
   border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
+
+  &:hover:not(:has(a:hover)) {
+    background-color: ${Colors.CLOUD.toString()};
+    border: 1px solid ${Colors.DARK_TERTIARY.toString()};
+  }
+
+  &:focus:not(:has(a:focus)) {
+    background-color: ${Colors.GREY.toString()};
+    border: 1px solid ${Colors.DARK_SECONDARY.toString()};
+  }
 `;
 
 const TextArea = styled.div`

@@ -1,5 +1,5 @@
 import React from "react";
-import { Colors, Row, T } from "ui";
+import { A, Colors, Link, Row, T } from "ui";
 import { cv } from "files";
 import styled from "styled-components";
 
@@ -10,25 +10,19 @@ interface Props {
 export function Links({ style }: Props): React.ReactElement {
   return (
     <LinkRow style={style}>
-      <a href={cv} download={"Angus Johnson CV.pdf"}>
-        <T color={Colors.LINK}>CV</T>
-      </a>
-      <a
-        href={"https://www.linkedin.com/in/angus-johnson-1757888a/"}
-        target={"_blank"}
-        rel={"noreferrer"}
-      >
-        <T color={Colors.LINK}>Linked In</T>
-      </a>
-      <a
-        href={
+      <A href={cv} download={"Angus Johnson CV.pdf"}>
+        CV
+      </A>
+      <Link url={"https://www.linkedin.com/in/angus-johnson-1757888a/"}>
+        Linked In
+      </Link>
+      <Link
+        url={
           "https://www.youtube.com/watch?v=qjQ-j7rAJi4&ab_channel=AngusJohnson"
         }
-        target={"_blank"}
-        rel={"noreferrer"}
       >
-        <T color={Colors.LINK}>Circus videos</T>
-      </a>
+        Circus videos
+      </Link>
     </LinkRow>
   );
 }

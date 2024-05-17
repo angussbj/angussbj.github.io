@@ -23,12 +23,14 @@ const projects: LinkDetails[] = [
     label: "MChess",
     description:
       "Chess variant platform that lets you compose rule-sets and explore unusual board geometries",
+    codeUrl: "https://github.com/Meta-Chess/react-prototype",
   },
   {
     url: "https://angussbj.github.io/befunge/",
     image: befungeImage,
     label: "Befunge",
     description: "Grid-based IDE for the esoteric programming language Befunge",
+    codeUrl: "https://github.com/angussbj/befunge",
   },
   {
     url: "https://play.google.com/store/apps/details?id=angus.planarodenumerics&hl=en_AU&gl=US",
@@ -36,6 +38,7 @@ const projects: LinkDetails[] = [
     label: "2D ODE Grapher",
     description:
       "Android app to plot 2D differential equations' vector fields, draw solution curves, and find equilibria",
+    codeUrl: "https://github.com/angussbj/PlanarODENumerics",
   },
 ];
 
@@ -45,18 +48,21 @@ const smallerProjects: LinkDetails[] = [
     image: gravityImage,
     label: "Gravity",
     description: "Numerical simulation of the n-body problem",
+    codeUrl: "https://github.com/angussbj/gravity",
   },
   {
     url: "https://angussbj.github.io/wordle-clone/",
     image: wordleImage,
     label: "Wordle clone",
-    description: "Wordle clone for practicing vanilla javascript",
+    description: "An exercise for practicing vanilla javascript",
+    codeUrl: "https://github.com/angussbj/wordle-clone",
   },
   {
     url: "https://angussbj.github.io/tetris-clone/",
     image: tetrisImage,
-    label: "Tetris",
-    description: "Tetris clone for practicing vanilla javascript",
+    label: "Tetris clone",
+    description: "An exercise for practicing vanilla javascript",
+    codeUrl: "https://github.com/angussbj/tetris-clone",
   },
 ];
 
