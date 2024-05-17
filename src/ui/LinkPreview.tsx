@@ -75,6 +75,7 @@ const Container = styled.a`
   border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
+  background-color: white;
 
   &:hover:not(:has(a:hover)) {
     background-color: ${Colors.CLOUD.toString()};
