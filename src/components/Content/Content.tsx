@@ -7,7 +7,6 @@ import {
   LinkPreview,
   mchessImage,
   odesImage,
-  Subheading,
   tetrisImage,
   wordleImage,
 } from "ui";

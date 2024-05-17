@@ -1,5 +1,5 @@
 import React from "react";
-import { A, Colors, Link, Row, T } from "ui";
+import { A, Link, Row } from "ui";
 import { cv } from "files";
 import styled from "styled-components";
 
