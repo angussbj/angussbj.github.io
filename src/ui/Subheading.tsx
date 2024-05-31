@@ -10,7 +10,7 @@ export function Subheading({ style, children }: Props): React.ReactElement {
   return (
     <div
       style={{
-        fontSize: 24,
+        fontSize: 28,
         fontWeight: 300,
         color: Colors.DARKEST.toString(),
         ...style,

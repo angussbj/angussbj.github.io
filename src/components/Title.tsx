@@ -5,7 +5,7 @@ export function Title(): React.ReactElement {
   return (
     <div
       style={{
-        fontSize: 48,
+        fontSize: 56,
         fontWeight: 300,
         color: Colors.DARKEST.toString(),
         textAlign: "center",
